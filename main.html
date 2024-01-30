@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rollercoaster of Success</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <div class="player-info" id="player-info"></div>
+    <div class="quest-card" id="quest-card"></div>
+    <div id="player-cards">
+      <h3>Player Cards</h3>
+        <div class="card" id="talent-card">Talent: Not yet acquired</div>
+        <div class="card" id="education-card">Education: Not yet acquired</div>
+        <div class="card" id="experience-card">Experience: Not yet acquired</div>
+        <div class="card" id="opportunity-card">Opportunity: Not yet acquired</div>   
+        <div class="card" id="lucky-event-cards">Lucky Event: Not yet acquired</div>    
+ 
+    </div>
+    <div id="card-decks">
+      <div class="card-deck" id="item-deck">
+        <h3>Item Deck</h3>
+        <p id="item-deck-count">Remaining: 16</p>
+      </div>
+      <div class="card-deck" id="lucky-event-deck">
+        <h3>Lucky Event Deck</h3>
+        <p id="lucky-event-deck-count">Remaining: 4</p>
+      </div>
+    </div>
+
+    
+    <div id="rolling-container">
+      <button id="roll-die" onclick="rollDie()">Roll Die</button>
+      <div id="die" class="die">1</div>
+    </div>
+    
+
+    <div class="dice-container"></div>
+	<button type="button" class="btn-roll-dice">Roll Dice</button>
+    <div id="roll-number-display">Rolled: 0</div>
+
+
+    <div id="choices">
+      <p id="instruction">Press "Roll Die" to begin.</p>
+      <button onclick="drawItemCard()">Draw Item Card</button>
+      <button onclick="drawLuckyEventCard()">Draw Lucky Event Card</button>
+      <button onclick="takeRisk()">Take a Risk</button>
+      <button onclick="passTurn()">Pass</button>
+    </div>
+    <div id="log"></div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

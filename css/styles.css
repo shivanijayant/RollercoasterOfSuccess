@@ -1,0 +1,167 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  #game-container {
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .player-info {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  #player-cards {
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .quest-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  #card-decks {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+  
+  .card-deck {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #log {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  
+  #rolling-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  #die {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #talent-card,
+  #education-card,
+  #experience-card,
+  #opportunity-card,
+  #lucky-event-cards {
+    margin-bottom: 10px;
+  }
+  
+  #lucky-event-cards {
+    margin-top: 20px;
+  }
+  
+  .die:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 600px) {
+    #game-container {
+      width: 90%;
+    }
+  }
+  
+
+
+  /********** DIE ROLL *******************/
+
+  .dice-container {
+	display: flex;
+}
+
+.dice {
+	width: 80px;
+	height: 80px;
+	position: relative;
+    margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.dice-dot {
+	--top: 0%;
+	--left: 0%;
+
+	width: 15px;
+	height: 15px;
+	background-color: #000000;
+	border-radius: 50%;
+
+	/* Dot Positioning */
+	position: absolute;
+	top: var(--top);
+	left: var(--left);
+	transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1));
+}
+
+.btn-roll-dice {
+	margin-top: 10px;
+}
